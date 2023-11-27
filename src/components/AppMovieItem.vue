@@ -8,8 +8,12 @@
           <div class="movie-title">{{ movie.title }}</div>
           <div class="movie-description">{{ movie.description }}</div>
           <div class="movie-genre">{{ movie.genre }}</div>
-          <button class="play-movie-btn">Play Movie</button>
+          <button class="play-movie-btn" @click="playMovie">Play Movie</button>
         </div>
+        <video ref="videoPlayer" class="movie-video-player" controls>
+          <source :src="movie.videoUrl" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </template>
@@ -22,7 +26,13 @@
         type: Object,
         required: true
       }
+    },
+    methods: {
+    playMovie() {
+      this.$refs.videoPlayer.style.display = 'block'; // Show the video player
+      this.$refs.videoPlayer.play(); // Start playing the video
     }
+  }
   };
   </script>
   
@@ -77,8 +87,24 @@
 }
 
 .play-movie-btn {
-    margin-top: 20px;
+  margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+.play-movie-btn:hover {
+  transform: scale(1.1); 
+  background-color: #007bff; 
+  color: white; 
+  cursor: pointer;
+}
+
+
+.movie-video-player {
+  display: none; 
+  width: 100%; 
+  /* Additional styling as needed */
+}
+
 </style>
 
   
