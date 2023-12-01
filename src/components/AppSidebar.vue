@@ -6,10 +6,8 @@
         <select id="genre" v-model="selectedGenre" @change="emitGenre">
           <option value="action">Action</option>
           <option value="drama">Drama</option>
-          <!-- Add more options as needed -->
         </select>
       </div>
-      <!-- Additional filtering options can be added here -->
       
     </aside>
     

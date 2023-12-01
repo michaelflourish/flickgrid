@@ -1,6 +1,5 @@
 <template>
     <footer>
-        <!-- Footer content here -->
         <p>© 2023 FlickGrid. All rights reserved.</p>
     </footer>
 </template>

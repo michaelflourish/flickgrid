@@ -27,20 +27,20 @@
   <style scoped>
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 1 column layout for mobile */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 20px;
     padding: 20px;
 }
 
 @media (min-width: 600px) {
     .movie-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (min-width: 1024px) {
     .movie-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
 </style>

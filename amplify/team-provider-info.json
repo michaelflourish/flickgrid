@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-flickgrid-dev-130353-authRole",
+      "UnauthRoleArn": "arn:aws:iam::036255851946:role/amplify-flickgrid-dev-130353-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::036255851946:role/amplify-flickgrid-dev-130353-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-flickgrid-dev-130353-deployment",
+      "UnauthRoleName": "amplify-flickgrid-dev-130353-unauthRole",
+      "StackName": "amplify-flickgrid-dev-130353",
+      "StackId": "arn:aws:cloudformation:us-east-2:036255851946:stack/amplify-flickgrid-dev-130353/a9506c70-8ee1-11ee-b732-0a930ca36fe1",
+      "AmplifyAppId": "d1jj85s7k5o6br"
+    },
+    "categories": {
+      "auth": {
+        "flickgridce0c352e": {}
+      }
+    }
+  }
+}
