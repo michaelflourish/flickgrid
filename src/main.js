@@ -11,11 +11,11 @@ Amplify.configure(awsExports);
 
 */
 
-import Amplify from 'aws-amplify';
+import {Amplify} from 'aws-amplify';
 import config from './amplifyconfiguration.json';
 Amplify.configure(config);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   router,

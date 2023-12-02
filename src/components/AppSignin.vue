@@ -13,7 +13,7 @@
 
 <script>
 // import { Amplify } from 'aws-amplify';
-import {Auth} from '@aws-amplify/auth';
+import Auth from '@aws-amplify/auth';
 
 export default {
   data() {
@@ -26,7 +26,7 @@ export default {
   methods: {
         async signIn() {
             try {
-            const user = await Auth.signIn(this.username, this.password);
+            const user = await Auth.signIn(this.username , this.password );
             console.log(user);
             this.$router.push('/movies'); 
             } catch (error) {

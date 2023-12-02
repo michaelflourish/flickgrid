@@ -14,7 +14,7 @@
 </template>
   <script>
  // import { Amplify } from 'aws-amplify';
-  import Auth from '@aws-amplify/auth';
+  import {Auth} from '@aws-amplify/auth';
 
 
   export default {
@@ -29,12 +29,25 @@
     methods: {
         async signUp() {
             try {
+
+            /*
             const { user } = await Auth.signUp({
                 'custom:username': this.username,
                 'custom:email': this.email,
                 'custom:phoneNumber': this.phoneNumber,
                 'custom:password': this.password,
             });
+            */
+            const { user } = await Auth.signUp({
+              username: this.username,
+              password: this.password,
+              attributes: {
+                email: this.email,
+                phone_number: this.phoneNumber, // Note: The phone number must be in E.164 format, e.g., '+15555555555'
+              },
+            });
+
+            
             console.log(user);
             } catch (error) {
             console.error('Error signing up:', error);
