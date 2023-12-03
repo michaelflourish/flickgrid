@@ -22,7 +22,6 @@
       return {
         username: '',
         email: '',
-        phoneNumber: '',
         password: ''
       };
     },
@@ -43,7 +42,6 @@
               password: this.password,
               attributes: {
                 email: this.email,
-                phone_number: this.phoneNumber, // Note: The phone number must be in E.164 format, e.g., '+15555555555'
               },
             });
 

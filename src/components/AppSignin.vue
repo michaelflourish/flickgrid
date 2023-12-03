@@ -12,8 +12,7 @@
 </template>
 
 <script>
-// import { Amplify } from 'aws-amplify';
-import Auth from '@aws-amplify/auth';
+import {Auth} from '@aws-amplify/auth';
 
 export default {
   data() {
