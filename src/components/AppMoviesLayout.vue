@@ -3,7 +3,6 @@
       <AppHeader />
       <AppSearchBar @update-search="handleSearch"/>
       <div id="toggleSidebar" @click="toggleSidebar">
-        <!-- Toggle Sidebar SVG here -->
       </div>
       <AppSidebar @update-genre="handleGenre" :style="{ left: isSidebarVisible ? '0px' : '-200px' }" />
       <div id="mainContent" :style="{ marginLeft: isSidebarVisible ? '200px' : '0px' }">

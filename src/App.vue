@@ -1,5 +1,9 @@
+<!-- NEW - add a route to the profile page -->
 <template>
   <div id="app">
-    <router-view></router-view>
+    <div id="nav">
+      <AppHomePage />
+    </div>
+    <router-view />
   </div>
 </template>

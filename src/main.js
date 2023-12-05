@@ -1,32 +1,29 @@
 import Vue from 'vue';
 import App from './App.vue';
-import './assets/styles.css';
 import router from './router';
 
+// Import the entire Auth0 configuration object
+import authConfig from '../auth_config.json';
 
-/*
-import Amplify, * as AmplifyModules from 'aws-amplify';
-import { AmplifyPlugin } from '@aws-amplify/ui-vue';
-import aws_exports from './aws-exports';
-Amplify.config(aws_exports);
-Vue.use(AmplifyPlugin, AmplifyModules);
+// Import the Auth0 plugin
+import { Auth0Plugin } from './auth';
 
-*/
-
-/*
-import Amplify from 'aws-amplify';
-import awsExports from './aws-exports';
-console.log(Amplify.configure(awsExports));
-*/
-
-import { Amplify } from 'aws-amplify';
-import amplifyconfig from './amplifyconfiguration.json';
-Amplify.configure(amplifyconfig);
+// Install the authentication plugin using properties from the authConfig object
+Vue.use(Auth0Plugin, {
+  domain: authConfig.domain,
+  clientId: authConfig.clientId,
+  onRedirectCallback: appState => {
+    router.push(
+      appState && appState.targetUrl
+        ? appState.targetUrl
+        : window.location.pathname
+    );
+  }
+});
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
-  render: h => h(App),
-}).$mount('#app')
-
+  render: h => h(App)
+}).$mount('#app');

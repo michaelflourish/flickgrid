@@ -5,10 +5,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Genres</a></li>
-        <li><a href="#">Latest Releases</a></li>
-        <li><a href="#">User Profile</a></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link v-if="$auth.isAuthenticated" to="/movies">Movies</router-link></li>
+        <li><router-link v-if="$auth.isAuthenticated" to="/profile">User Profile</router-link></li>
+        <li><router-link v-if="$auth.isAuthenticated" to="/">Log out</router-link></li>
       </ul>
     </nav>
   </header>
